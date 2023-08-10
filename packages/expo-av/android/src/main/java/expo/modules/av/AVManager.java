@@ -660,7 +660,7 @@ public class AVManager implements LifecycleEventListener, AudioManager.OnAudioFo
   @Override
   public void prepareAudioRecorder(final ReadableArguments options, final Promise promise) {
     if (isMissingAudioRecordingPermissions()) {
-      promise.reject("E_MISSING_PERMISSION", "Missing audio recording permissions.");
+      promise.reject("E_MISSING_PERMISSION", "Missing audio recording permission.");
       return;
     }
 
@@ -846,7 +846,7 @@ public class AVManager implements LifecycleEventListener, AudioManager.OnAudioFo
   @Override
   public void startAudioRecording(final Promise promise) {
     if (isMissingAudioRecordingPermissions()) {
-      promise.reject("E_MISSING_PERMISSION", "Missing audio recording permissions.");
+      promise.reject("E_MISSING_PERMISSION", "Missing audio recording permission.");
       return;
     }
 
